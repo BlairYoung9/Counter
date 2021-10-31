@@ -9,7 +9,7 @@ def visits():
         session['visits'] = session.get('visits') + 1 
     else:
         session['visits'] = 1 
-    return "Counter: {}".format(session.get('visits'))
+    return render_template("counter.html")
 
 @app.route('/destroy-session/')
 def destroy_session():
